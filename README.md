@@ -21,4 +21,5 @@ npm install
 bower install
 grunt serve
 ```
-A aplicação front-end também está rodando na AWS pelo link: <http://ec2-18-231-36-134.sa-east-1.compute.amazonaws.com:9000>
+
+Demonstração das aplicações disponível na AWS: <http://ec2-18-231-36-134.sa-east-1.compute.amazonaws.com:9000>

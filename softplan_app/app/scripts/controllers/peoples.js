@@ -90,7 +90,7 @@ var app = angular.module('softPlanApp')
         name: $scope.newPeople.name,
         gender: $scope.newPeople.gender,
         email: $scope.newPeople.email,
-        birthdate: $scope.newPeople.birthdate,
+        birthdate: formatDate($scope.newPeople.birthdate),
         placeOfBirth: $scope.newPeople.placeOfBirth,
         citizenship: $scope.newPeople.citizenship,
         federalIdentification: $scope.newPeople.federalIdentification,
@@ -148,6 +148,11 @@ var app = angular.module('softPlanApp')
             if($scope.peoples[i].id == id) {
                 //copy of originial object to scope object
                 $scope.newPeople = angular.copy($scope.peoples[i]);
+                if($scope.newPeople.birthdate) {
+                  var dateStr = $scope.newPeople.birthdate.split("/");                  
+                  $scope.newPeople.birthdate = new Date(dateStr[2], dateStr[1] - 1, dateStr[0]);
+
+                }
             }
         }
     };

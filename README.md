@@ -6,7 +6,10 @@ Senha: 123456
 ```
 ou se preferir usar o header `"Authorization": "Basic YWRtaW46MTIzNDU2"`
 
-Comando docker para baixar imagem e rodar a aplicação: `docker run -p 5000:5000 rnldfll/softplan`
+Comando docker para baixar imagem e rodar a aplicação: 
+```
+docker run -p 5000:5000 rnldfll/softplan
+```
 A aplicação irá rodar na porta `5000`.
 Para acessar a interface de teste de API (Swagger) o link é: <http://localhost:5000/swagger-ui.html`>
 Para acessar o banco de dados de teste da aplicação: 
